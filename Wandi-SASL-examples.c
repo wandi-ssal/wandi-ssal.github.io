@@ -25,13 +25,11 @@ for further details.
 
 int main()
 {
-	int	i;
-	char	*str = "string value";
+	char	*str = "String Argument Value";
 	unsigned	int	hex_value = 0x3d59ba4f;
 	char	char_value = 'A';
 
 	LoggerStartUp();
-
 	/** These adjustable parameters are fixed for the Free Version **/
 
 	/**
@@ -45,31 +43,48 @@ int main()
 		2y – Different types of supported format string specifiers are %s, %d, %f, %c, %x, %p.
 	**/
 	LoggerAppsMsg(1,Main,Info,"2y - Different types of supported format specifiers are %%s %%d %%f %%c %%x %%p");
-	LoggerAppsMsg(1,Main,Info,">>>> For example:  [%s, %d, %f, %c, %x, %p]",str,99,3.4,char_value,hex_value, str);
+	LoggerAppsMsg(1,Main,Info,">>>> For example:  [string=%s, integer=%d, double=%f, char=%c, hex=%x, pointer=%p]",str,99,3.4,char_value,hex_value, str);
 
 	/**
 	Length for format string specifier %s arguments.
 		3y – Maximum length for format string specifier %s argument is 64 characters.
 	**/
 	LoggerAppsMsg(1,Main,Info,"3y - Maximum length for string specifier [%%s] argument is 64 characters]");
+	LoggerAppsMsg(1,Main,Info,">>>> For example:  [%s]","This string is 64 characters long aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
 	/**
 	Length for message format string.
 		4y – Maximum length format string specification is 256 characters.
 	**/
 	LoggerAppsMsg(1,Main,Info,"4y - Maximum length format string specification is 256 characters");
+	LoggerAppsMsg(1,Main,Info,"0 character aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccccccccccccccccccccccccccccccccccccccccccccccccccdddddddddddddddddddddddddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeeee to 256 characters");
 
 	/**
 	Subset of ASCII characters for both string arguments and output format strings.
-		5y - Subset of ASCII characters allowed for format string specification and string argument are upper/lower case alphanumeric and  ! "#$%&'()*+,-./:;<=>?@[]^_{|}~\\ characters.
+		5y - Fixed subset of ASCII characters allowed: uppler/lower case alphanumeric, blank and  !#$%%&()*+,-./:;<=>?@[]_{|} characters.
+	LoggerAppsMsg(1,Main,Info,"5y - Fixed subset of ASCII characters allowed: uppler/lower case alphanumeric, blank and  !#$%%&()*+,-./:;<=>?@[]_{|} characters."); // print allowed characters in format string specification
+	LoggerAppsMsg(1,Main,Info,"[%s]", "!#$&()*+,-./:;<=>?@[]_{|}"); // print allowed characters in string argument
+	LoggerAppsMsg(1,Main,Info,"%%"); // print %
+	LoggerAppsMsg(1,Main,Info,"100%%"); // print 100%
+	LoggerAppsMsg(1,Main,Info,"%%s = %s","STR"); // print %s = STR
+	LoggerAppsMsg(1,Main,Info,"\\"); // print single backslash
+	LoggerAppsMsg(1,Main,Info,"\""); // print single duble qoute
+	LoggerAppsMsg(1,Main,Info,"\'"); // print single qoute
 	**/
-	LoggerAppsMsg(1,Main,Info,"5y - Subset of ASCII characters allowed for format string specification and string argument are uppler/lower case alphanumeric and \" !#$%&'()*+,-./:;<=>?@[]^_{|}~\\ characters.");
+	LoggerAppsMsg(1,Main,Info,"5y - Fixed subset of ASCII characters allowed: uppler/lower case alphanumeric, blank and ! #$%%&()*+,-./:;<=>?@[]_{|} characters."); // print allowed characters in format string specification
+	LoggerAppsMsg(1,Main,Info,"[%s]", "! #$&()*+,-./:;<=>?@[]_{|}"); // print allowed characters in string argument
+	LoggerAppsMsg(1,Main,Info,"%%"); // print %
+	LoggerAppsMsg(1,Main,Info,"100%%"); // print 100%
+	LoggerAppsMsg(1,Main,Info,"%%s = %s","STR"); // print %s = STR
+	LoggerAppsMsg(1,Main,Info,"\\"); // print single backslash
+	LoggerAppsMsg(1,Main,Info,"\""); // print single duble qoute
+	LoggerAppsMsg(1,Main,Info,"\'"); // print single qoute
 
 	/**
 	Number of severity id=value pairs and length of value string.
-		6y – Maximum number of severity levels is 4 and length of value is 8 characters.
+		6y – Maximum number of severity levels is 4 and length of value is 16 characters.
 	**/
-	LoggerAppsMsg(1,Main,Info,"6y - Maximum number of severity levels is 4 and length of value is 8 characters.");
+	LoggerAppsMsg(1,Main,Info,"6y - Maximum number of severity levels is 4 and length of value is 16 characters.");
 
 	/**
 	Number of logical message grouping id=value pairs and length of value string.
