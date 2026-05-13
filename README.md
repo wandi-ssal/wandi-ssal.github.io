@@ -23,6 +23,6 @@ Refer to [Wandi-SASL-examples.c](Wandi-SASL-examples.c) for application examples
 Curent and expanding list of [Wandi-SASL Capabilities](https://www.istech.com/?page_id=570) for Free and Paid versions.
 [^1]: Wandi-SASL Free Version support capabilities 1 and 2 only.
 
-Download the [Install_dst.zip](https:github.com/) file and refer to the **README-n-Install.sh** file for further installation and execution instructions.
+Download the [Install_dst.zip](https:github.com/Install_dst.zip) file and refer to the **README-n-Install.sh** file for further installation and execution instructions.
 
 Contact: **bwoodley@istech.com**
