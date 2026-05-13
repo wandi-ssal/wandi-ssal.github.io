@@ -1,6 +1,6 @@
 <div align="center">
   
-## Free version of Wandi-SASL is a C-Program application utility that validates and protects application log messages during development and deployment
+##  Free version of Wandi-SASL is a C-Program application utility that validates and protects application log messages during development and deployment
 
 </div>
 
