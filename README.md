@@ -25,5 +25,4 @@ Curent and expanding list of [Wandi-SSAL Capabilities](https://www.istech.com/?p
 
 For Ubuntu Linux OS [Download Wandi-SSAL-Install_dst.zip](./Wandi-SSAL-Install_dst.zip) file and refer to the **README-n-Install.sh** file for further installation and execution instructions.
 
-Version 0.2
 Contact: **bwoodley@istech.com**
